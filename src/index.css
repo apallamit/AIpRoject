@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply text-gray-900 bg-black;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-gold text-black px-6 py-2 rounded-full hover:bg-gold/80 transition-colors;
+  }
+}
+
+/* Swiper custom styles */
+.swiper-button-next,
+.swiper-button-prev {
+  color: theme('colors.gold') !important;
+}
+
+.swiper-pagination-bullet {
+  background-color: theme('colors.gold') !important;
+  opacity: 0.5;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: theme('colors.gold') !important;
+  opacity: 1;
+}
+
+/* Custom animations */
+.product-carousel {
+  overflow: visible !important;
+}
+
+.product-carousel .swiper-slide {
+  transition: transform 0.3s ease;
+}
+
+.product-carousel .swiper-slide-active {
+  transform: scale(1.05);
+}
